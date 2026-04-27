@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music Album Store</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom,black,grey,white);
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .albums {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            gap: 20px;
+                flex-grow: 1.5;
+            }
+        
+
+        .album {
+            background-color: white;
+            width: 200px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .image-box {
+            height: 150px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .album h3 {
+            margin: 10px 0 5px;
+        }
+
+        .album p {
+            margin: 0 0 10px;
+            color: #666;
+        }
+
+        button {
+            padding: 8px 15px;
+            border: none;
+            background-color: #111;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #444;
+        }
+       .album-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+}
+.album:hover {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+
+
+       
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Music Album Store</h1>
+        <p>Buy My favorite albums</p>
+    </header>
+
+    <section class="albums">
+
+        <div class="album">
+            <div class="image-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHn50uZFYvz5K-uc38zeDpeRdvTW4xvFEPxg&s" class="album-img">
+            </div>
+            <h3>Starboy</h3>
+            <p>The Weeknd</p>
+            <a href="https://www.amazon.in/Starboy-Weeknd/dp/B01LTHY0H6" target="_blank">
+                 <button>Buy Now</button>
+            </a>
+        </div>
+
+        <div class="album">
+            <div class="image-box">
+                <img src="https://cdn-images.dzcdn.net/images/cover/b4a83c552cf72ef699d51748ad676e25/0x1900-000000-80-0-0.jpg" class="album-img">
+            </div>
+            <h3>Longevity Flow</h3>
+            <p>Stormzy</p>
+            <a href="https://www.amazon.in/Longevity-Flow-Stormzy/dp/B0B1Z9ZL8P" target="_blank">
+                <button>Buy Now</button>
+            </a>
+        </div>
+
+        <div class="album">
+            <div class="image-box">
+                <img src="https://upload.wikimedia.org/wikipedia/en/c/c1/The_Weeknd_-_After_Hours.png" class="album-img">
+            </div>
+            <h3>After Hours</h3>
+            <p>The Weeknd</p>
+            <a href="https://www.amazon.in/After-Hours-Weeknd/dp/B084XT1P28" target="_blank">
+                <button>Buy Now</button>
+                </a>
+        </div>
+
+        <div class="album">
+            <div class="image-box">
+                <img src="https://upload.wikimedia.org/wikipedia/en/f/f0/The_Weeknd_-_Hurry_Up_Tomorrow.png" class="album-img">
+            </div>
+            <h3>Hurry Up Tomorrow</h3>
+            <p>The Weeknd</p>
+            <a href="https://www.amazon.in/Hurry-Up-Tomorrow-Weeknd/dp/B0DP3J49KD" target="_blank">
+            <button>Buy Now</button>
+            </a>
+        </div>
+
+        <div class="album">
+            <div class="image-box">
+                <img src="https://upload.wikimedia.org/wikipedia/en/8/80/Eminem_-_Music_to_Be_Murdered_By.png" class="album-img">
+            </div>
+            <h3>Music To Be Murdered By</h3>
+            <p>Eminem</p>
+            <a href="https://www.amazon.in/Music-Be-Murdered-By-Eminem/dp/B07Z5Y1Z9C" target="_blank">
+                 <button>Buy Now</button>
+            </a>
+        </div>
+
+    </section>
+    <footer style="text-align: center; padding: 20px; background-color: black; color: white;">
+        <p>&copy; 2024 Hashemi Technologies is a unit of HH Interactive. All rights reserved.</p>  
+
+    
+</body>
+</html>
