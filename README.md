@@ -1,2 +1,2 @@
 # python-basics
-Python practice &amp; scripts by Hasan
+Python practice &amp; codes by Hasan
