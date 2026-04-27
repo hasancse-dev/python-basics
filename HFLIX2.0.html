@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Netflix Style UI</title>
+
+<style>
+
+/* BODY */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141414;
+    color: white;
+}
+
+/* NAVBAR */
+header {
+    background-color: #000;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #E50914;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #E50914;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 60vh;
+    background: linear-gradient(to top, #141414, transparent),
+                url("C:\Users\lenovo\Pictures\some-wallpapers-from-timeless-v0-sqvuofzlt4sd1.jpg") center/cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* MOVIE SECTION */
+.section {
+    padding: 20px 40px;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+}
+
+.movies {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+}
+
+.movie {
+    min-width: 200px;
+    height: 300px;
+    background-color: #222;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.movie img,
+.movie video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+}
+
+.movie video {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    z-index: 2;
+}
+
+.movie:hover video {
+    opacity: 1;
+}
+
+.movie:hover img {
+    opacity: 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">HFLIX</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">TV Shows</a>
+        <a href="#">Movies</a>
+        <a href="#">My List</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>All my favourites in one destination</h1>
+</section>
+
+<section class="section">
+    <h2>Trending Now</h2>
+    <div class="movies">
+
+        <div class="movie">
+            <a href="C:\Users\lenovo\Videos\Man.of.Steel.2013.720p.BluRay.x264.YIFY.mp4"target="_blank">
+                <img src="C:\Users\lenovo\Pictures\images (5).jpg" alt="Movie 1">
+                <video muted loop>
+                    <source src="C:\Users\lenovo\Videos\Man.of.Steel.2013.720p.BluRay.x264.YIFY.mp4" type="video/mp4">
+                </video>
+            </a>
+        </div>
+
+        <div class="movie">
+            <a href="https://youtu.be/7AbRB4QgxJ8?si=GbMWmeZeLTM10P67" target="_blank">
+                <img src="C:\Users\lenovo\Pictures\Dabangg_poster.jpg">
+                <video muted loop>
+                    <source src="C:\Users\lenovo\Downloads\Kaise Bani Kaise Bani - The Chatni Song _ Dabangg 2 _ Salman Khan.mp4" type="video/mp4">
+                </video>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>Questions? Call 9935414164</p>
+</footer>
+
+<script>
+
+/* 1 SECOND NETFLIX STYLE DELAY */
+
+document.querySelectorAll(".movie").forEach(movie => {
+    const video = movie.querySelector("video");
+    let hoverTimer;
+
+    movie.addEventListener("mouseenter", () => {
+        hoverTimer = setTimeout(() => {
+            video.play();
+        }, 1000); // 1 second delay
+    });
+
+    movie.addEventListener("mouseleave", () => {
+        clearTimeout(hoverTimer);
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+
+</script>
+
+</body>
+</html>
