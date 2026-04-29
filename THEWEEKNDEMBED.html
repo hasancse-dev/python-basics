@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Weeknd Grid Layout</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* GRID CONTAINER */
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 120px 400px 60px;
+    gap: 10px;
+    padding: 15px;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    background: linear-gradient(90deg, #8B0000, #000000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border: 2px solid red;
+}
+
+.header img {
+    height: 80px;
+    border-radius: 8px;
+}
+
+/* SIDEBAR */
+.sidebar {
+    grid-area: sidebar;
+    background-color: #111111;
+    padding: 20px;
+    border: 1px solid red;
+}
+
+.sidebar h3 {
+    color: red;
+}
+
+.sidebar iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* CONTENT */
+.content {
+    grid-area: content;
+    background-color: #1a1a1a;
+    padding: 25px;
+    border: 1px solid red;
+}
+
+.content h2 {
+    color: #ff0000;
+}
+
+/* FOOTER */
+.footer {
+    grid-area: footer;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid red;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.box {
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER WITH IMAGE -->
+    <div class="header box">
+        <img src="C:\Users\lenovo\Pictures\the-weeknd-after-hours-3cedl88oh962sybq.jpg" alt="The Weeknd Album">
+        THE WEEKND
+    </div>
+
+    <!-- SIDEBAR WITH VIDEO -->
+    <div class="sidebar box">
+        <h3>Top Tracks</h3>
+        Blinding Lights<br>
+        Starboy<br>
+        Save Your Tears<br>
+
+        <!-- Embedded Video -->
+        <iframe 
+          width="560" height="315" src="https://www.youtube.com/embed/8zHWTsdnC7A?si=6daq0JFvWtoKBV6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+
+        </iframe>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="content box">
+        <h2>After Hours Vibes</h2>
+        <p>This layout captures a dark neon aesthetic inspired by The Weeknd's iconic style.</p>
+        <p>Black backgrounds, deep reds, cinematic mood lighting.</p>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer box">
+        If it ain't XO,then it's gotta go.
+    </div>
+
+</div>
+
+</body>
+</html>
